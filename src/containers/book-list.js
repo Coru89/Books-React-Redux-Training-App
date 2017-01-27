@@ -22,7 +22,8 @@ class BookList extends Component {
     }
 }
 
-function mapStateToProps(state) {
+//this connects react component to redux
+function mapAppStateToProps(state) {
     // whatever is return from here will show up as props
     // inside of BookList
     return {
@@ -30,4 +31,8 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(BookList);
+export default connect(mapAppStateToProps)(BookList);
+
+//notes:
+// whenever the application state changes, the container re-renders
+// "                                    "  the object in the state function will be assigned as props
